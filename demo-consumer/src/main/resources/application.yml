@@ -1,0 +1,33 @@
+dubbo:
+  registry:
+    address: nacos://175.178.83.13:8848
+  protocol:
+    name: dubbo
+    port: -1
+  application:
+    name: DemoApplication-consumer
+    qos-enable: true
+    qos-port: 33333
+    logger: slf4j
+    qos-accept-foreign-ip: false
+management:
+  metrics:
+    enabled: true
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      base-path: /
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  server:
+    port: 7003
+server:
+  port: 8081
+arthas:
+  http-port: 0
+  telnet-port: 0
