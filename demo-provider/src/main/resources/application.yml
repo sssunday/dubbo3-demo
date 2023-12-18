@@ -5,11 +5,14 @@ dubbo:
     name: dubbo
     port: -1
   application:
-    name: DemoApplication
+    name: DemoApplication-provider
     qos-enable: true
     qos-port: 22222
     logger: slf4j
     qos-accept-foreign-ip: false
+    register-mode: instance
+#  metadata-report:
+#    address: nacos://175.178.83.13:8848
 management:
   metrics:
     enabled: true
